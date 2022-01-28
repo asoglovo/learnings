@@ -1,3 +1,16 @@
+# Objective
+
+The objective of today's learning is to create an [extension for Chrome](https://developer.chrome.com/docs/extensions/mv3/) that hooks into Vue's application to read from the Feature Toggle's store module.
+The extension will allow swithwing fearture toggles dynamically, so that it's effects can be manually tested.
+
+## Action Plan
+
+- Follow along the [Hello, World](https://developer.chrome.com/docs/extensions/mv3/getstarted/) tutorial to have a basic functioning extension
+- Fake a list of feature toggles and make a simple popup UI that shows them and allows to toggle their value
+- Learn how to hook into the Vue's application instance (by reverse-engineering how the [official Devtools](https://github.com/vuejs/devtools) do it)
+- Hook into the application's store
+- Connect the changes on the feature toggle's values to the corresponding Vuex actions
+
 ## How Vue Allows DevTools Injection
 
 Inside the _packages/runtime-core/src/renderer.ts_ file, the function `baseCreateRenderer`:
